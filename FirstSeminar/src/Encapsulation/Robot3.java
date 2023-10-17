@@ -27,14 +27,14 @@ public class Robot3 {
     /**
      * Создание робота
      *
-     * @param name  Имя робота !Не должно начинаться с цифры
+     * @param name  Имя робота! Не должно начинаться с цифры
      * @param level Уровень робота
      */
     private Robot3(String name, int level) {
         System.out.println(Character.isDigit(name.charAt(0)));
-        if ((name.isEmpty()
-                || Character.isDigit(name.charAt(0)))
-                || Robot3.names.indexOf(name) != -1)
+        if ((name.isEmpty()                             //Если имя робота пустое
+                || Character.isDigit(name.charAt(0)))   //или первый символ имени являтся цифрой
+                || Robot3.names.indexOf(name) != -1)    //или такое имя было задано ранее
 
         {
             this.name =
