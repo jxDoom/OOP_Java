@@ -1,5 +1,7 @@
 package main.clients;
 
+import main.clients.type_animals.Cat;
+
 import java.time.LocalDate;
 
 public class Animal {
@@ -65,5 +67,13 @@ public class Animal {
 //        if (!(obj instanceof Animal)) return false;
 //        Animal a = (Animal) obj; // операция каста (приведение типов)
 //        if (this.id = a.id) return true;
+//    }
+
+//    public static void todo() {
+//        for (int i = 0; i < animals.size(); i++) {
+//            Animal an = animals.get(i);
+//            if (an instanceof Cat) ((Cat) an).meow(); //операция каста и операция instanceof дорогостоящие,
+//            влияют на производительность, их не должно быть много в коде
+//        }
 //    }
 }
