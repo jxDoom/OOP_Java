@@ -3,10 +3,12 @@ package main.clients;
 import java.time.LocalDate;
 
 public class Animal {
-//    private String nickName;
-//    private Owner owner;
-//    private LocalDate birthDate;
-//    private Illness illness;
+//    private String nickName; // Поле класса
+//    private Owner owner; // Будущий объект (уже объект). Он же в составе другого объекта является полем
+//    private LocalDate birthDate; // Поле класса
+//    private Illness illness; // Объект
+
+    //todo Все поля класса называют состоянием объекта, а все его методы - это поведения объекта
 
     // protected видно и в классе и во всех наследниках, также еще внутри пакета
     protected String nickName;
@@ -86,7 +88,7 @@ public class Animal {
         return getClass().getSimpleName();
     }
 
-    @Override
+    @Override // Переопределенный метод
     public String toString() {
         return String.format("nickName = %s, birthDay = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
     }
