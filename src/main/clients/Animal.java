@@ -59,4 +59,11 @@ public class Animal {
     public String toString() {
         return String.format("Name: %s, Birth Date: %s, Owner: %s, Illness: %s", name, birthDate, owner, illness);
     }
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (!(obj instanceof Animal)) return false;
+//        Animal a = (Animal) obj; // операция каста (приведение типов)
+//        if (this.id = a.id) return true;
+//    }
 }
