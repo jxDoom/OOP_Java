@@ -1,23 +1,30 @@
 package main.clients.type_animals;
 
+import main.actions.Flyable;
+import main.actions.Goable;
 import main.clients.Animal;
 import main.clients.Illness;
 import main.clients.Owner;
 
 import java.time.LocalDate;
 
-public class Parrot extends Animal {
+public class Parrot extends Animal implements Goable, Flyable {
     public Parrot(String name, Owner owner, LocalDate birthDate, Illness illness) {
         super(name, owner, birthDate, illness);
     }
 
     @Override
-    public void swim() {
-        System.out.println(name + " не умеет плавать!");
+    public void hunt() {
+        System.out.println(getName() + " не умеет охотиться");
     }
 
     @Override
-    public void hunt() {
-        System.out.println(name + " не умеет охотиться!");
+    public double fly() {
+        return 12D;
+    }
+
+    @Override
+    public Double run() {
+        return 2D;
     }
 }

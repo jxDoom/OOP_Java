@@ -1,10 +1,10 @@
 package main.clients;
 
-import main.clients.type_animals.Cat;
+import main.actions.Goable;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected Owner owner;
     protected LocalDate birthDate;
@@ -17,45 +17,16 @@ public class Animal {
         this.illness = illness;
     }
 
+//    public Animal() {
+//        this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болезнь"));
+//    }
+
     public String getName() {
         return name;
     }
 
-//    public Owner getOwner() {
-//        return owner;
-//    }
-//
-//    public LocalDate getBirthDate() {
-//        return birthDate;
-//    }
-//
-//    public Illness getIllness() {
-//        return illness;
-//    }
-//
-//    public void setIllness(Illness illness) {
-//        this.illness = illness;
-//    }
-
-    public void toGo() {
-        System.out.print("ходит");
-    }
-
-    public void fly() {
-        System.out.print("летает");
-    }
-
-    public void swim() {
-        System.out.print("плавает");
-    }
-
-    public void hunt() {
-        System.out.print("охотится");
-    }
-
-    public String getType() {
-        return getClass().getSimpleName();
-    }
+    public abstract void hunt(); // Не лучшая реализация абстрактного метода, это для примера
+    // (необходимо было бы выбрать действие, которое применимо ко всем животным, например есть, спать и т.д.)
 
     @Override
     public String toString() {
@@ -77,3 +48,5 @@ public class Animal {
 //        }
 //    }
 }
+
+// Интерфейс в программировании == контракт
