@@ -2,7 +2,10 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
+//todo Абстрактный класс - это такой класс который может иметь, а может и не иметь один и более абстрактных методов
+// Экземпляр абстрактного класса нельзя создать через ключевое слово new
+
 //    private String nickName; // Поле класса
 //    private Owner owner; // Будущий объект (уже объект). Он же в составе другого объекта является полем
 //    private LocalDate birthDate; // Поле класса
@@ -53,13 +56,13 @@ public class Animal {
         this.illness = illness;
     }
 
-    public void lifeCicle(){
-        wakeUp("12:00");
-        hunt();
-        eat();
-        sleep();
-        wakeUp();
-    }
+//    public void lifeCicle(){
+//        wakeUp("12:00");
+//        hunt();
+//        eat();
+//        sleep();
+//        wakeUp();
+//    }
 
     private void wakeUp(){
         System.out.println("Животное проснулось!");
@@ -74,9 +77,7 @@ public class Animal {
         System.out.println("Животное охотится!");
     }
 
-    private void eat(){
-        System.out.println("Животное ест!");
-    }
+    public abstract void eat();
 
     private void sleep(){
         System.out.println("Животное уснуло!");

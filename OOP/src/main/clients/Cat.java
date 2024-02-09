@@ -2,7 +2,7 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal {
+public /*abstract*/ class Cat extends Animal implements Goable, Huntable { // Все абстрактные методы в неабстрактных наследниках должны быть переопределены
     // todo Напомнить в чем разница в double
     Double discount;
 
@@ -14,6 +14,11 @@ public class Cat extends Animal {
     public Cat() {
         super();
         this.discount = 10D;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Кошка поймала мышку и кушает");
     }
 
     public Double getDiscount() {
@@ -30,6 +35,10 @@ public class Cat extends Animal {
 
     public static void meow(){
         System.out.println("Мяууу!");
+    }
+    @Override
+    public void toGo() {
+        System.out.print("ходит");
     }
 
     @Override
