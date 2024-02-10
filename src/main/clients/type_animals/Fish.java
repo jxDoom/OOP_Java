@@ -1,6 +1,6 @@
 package main.clients.type_animals;
 
-import main.actions.Swimable;
+import main.clients.type_animals.actions.Swimable;
 import main.clients.Animal;
 import main.clients.Illness;
 import main.clients.Owner;

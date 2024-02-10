@@ -1,7 +1,5 @@
 package main.clients;
 
-import main.actions.Goable;
-
 import java.time.LocalDate;
 
 public abstract class Animal {

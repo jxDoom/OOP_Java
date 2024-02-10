@@ -1,7 +1,7 @@
 package main.clients.type_animals;
 
-import main.actions.Goable;
-import main.actions.Huntable;
+import main.clients.type_animals.actions.Goable;
+import main.clients.type_animals.actions.Huntable;
 import main.clients.Animal;
 import main.clients.Illness;
 import main.clients.Owner;

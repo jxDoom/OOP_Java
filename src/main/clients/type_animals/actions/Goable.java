@@ -1,4 +1,4 @@
-package main.actions;
+package main.clients.type_animals.actions;
 
 public interface Goable {
     default Double run() {

@@ -1,7 +1,7 @@
 package main;
 
-import main.actions.Goable;
-import main.actions.Swimable;
+import main.clients.type_animals.actions.Goable;
+import main.clients.type_animals.actions.Swimable;
 import main.clients.Illness;
 import main.clients.Owner;
 import main.clients.type_animals.Cat;
