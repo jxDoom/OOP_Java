@@ -1,10 +1,10 @@
-package main.medical_staff;
+package veterinary_clinic.core.personal;
 
-import main.medical_staff.actions.Helpable;
+import veterinary_clinic.core.personal.actions.Helpable;
 
 import java.time.LocalDate;
 
-public class Assistent extends BaseStaff implements Helpable {
+public class Assistent extends Personal implements Helpable {
     public Assistent(String name, LocalDate birthDate, boolean highEducation, int experience) {
         super(name, birthDate, highEducation, experience);
     }

@@ -1,4 +1,4 @@
-package main.clients;
+package veterinary_clinic.core.clients;
 
 public class Owner {
     String fullName;

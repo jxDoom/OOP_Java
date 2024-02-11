@@ -1,4 +1,4 @@
-package main.medical_staff.actions;
+package veterinary_clinic.core.personal.actions;
 
 public interface Inspectable {
     default String inspect() {

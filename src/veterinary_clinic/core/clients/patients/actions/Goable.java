@@ -1,4 +1,4 @@
-package main.clients.type_animals.actions;
+package veterinary_clinic.core.clients.patients.actions;
 
 public interface Goable {
     default Double run() {

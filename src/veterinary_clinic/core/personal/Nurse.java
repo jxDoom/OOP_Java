@@ -1,11 +1,11 @@
-package main.medical_staff;
+package veterinary_clinic.core.personal;
 
-import main.medical_staff.actions.Injectable;
-import main.medical_staff.actions.Inspectable;
+import veterinary_clinic.core.personal.actions.Injectable;
+import veterinary_clinic.core.personal.actions.Inspectable;
 
 import java.time.LocalDate;
 
-public class Nurse extends BaseStaff implements Inspectable, Injectable {
+public class Nurse extends Personal implements Inspectable, Injectable {
     public Nurse(String name, LocalDate birthDate, boolean highEducation, int experience) {
         super(name, birthDate, highEducation, experience);
     }

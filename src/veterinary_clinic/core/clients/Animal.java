@@ -1,21 +1,25 @@
-package main.clients;
+package veterinary_clinic.core.clients;
 
 import java.time.LocalDate;
 
-public abstract class Animal {
-    protected String name;
+public abstract class Animal extends Patient {
+    public String name;
     protected Owner owner;
     protected LocalDate birthDate;
     protected Illness illness;
 
-    public Animal(String name, Owner owner, LocalDate birthDate, Illness illness) {
+//    public Animal(String name, Owner owner, LocalDate birthDate, Illness illness) {
+//        this.name = name;
+//        this.owner = owner;
+//        this.birthDate = birthDate;
+//        this.illness = illness;
+//    }
+
+    public Animal(String name) {
         this.name = name;
-        this.owner = owner;
-        this.birthDate = birthDate;
-        this.illness = illness;
     }
 
-//    public Animal() {
+    //    public Animal() {
 //        this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болезнь"));
 //    }
 

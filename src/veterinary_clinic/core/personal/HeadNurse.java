@@ -1,8 +1,8 @@
-package main.medical_staff;
+package veterinary_clinic.core.personal;
 
-import main.medical_staff.actions.Injectable;
-import main.medical_staff.actions.Inspectable;
-import main.medical_staff.actions.Provideable;
+import veterinary_clinic.core.personal.actions.Injectable;
+import veterinary_clinic.core.personal.actions.Inspectable;
+import veterinary_clinic.core.personal.actions.Provideable;
 
 import java.time.LocalDate;
 
