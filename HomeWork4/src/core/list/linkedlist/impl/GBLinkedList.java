@@ -7,14 +7,14 @@ import java.util.Iterator;
 public class GBLinkedList<E> implements GBList<E> {
     private Node<E> firstNode;
     private Node<E> lastNode;
-    private int size;
+    private int size = 0;
 
     public GBLinkedList() {
         lastNode = new Node<E>(null, firstNode, null);
         firstNode = new Node<E>(null, null, lastNode);
     }
 
-    private static class Node<E> { // нода как "стопор" в списке
+    public class Node<E> { // нода как "стопор" в списке
         private E item; // текущий элемент
         private Node<E> next; // нода следующего элемента
         private Node<E> prev; // нода предыдущего элемента
@@ -22,7 +22,7 @@ public class GBLinkedList<E> implements GBList<E> {
         public Node(E item, Node<E> next, Node<E> prev) {
             this.item = item;
             this.next = next;
-            this.prev = prev;
+//            this.prev = prev;
         }
 
         public E getItem() {
@@ -51,7 +51,7 @@ public class GBLinkedList<E> implements GBList<E> {
     }
 
     @Override
-    public void add(E elem) {
+    public void addLast(E elem) {
         Node<E> temp = lastNode;
         temp.setItem(elem);
         lastNode = new Node<E>(null, temp, null);
@@ -61,13 +61,21 @@ public class GBLinkedList<E> implements GBList<E> {
 
     @Override
     public void remove(int index) {
-
+        if (firstNode == null || index < 0 || index >= size()) {
+            System.out.println("Error: Attempting to call remove()");
+        } else {
+//            int tmp = (int) firstNode.getItem();
+//            firstNode = firstNode.getNext();
+//            tmp.
+        }
     }
 
     @Override
-    public E get(int index) {
+    public E getElem(int index) {
         Node<E> target = firstNode.getNext();
-        for (int i = 0; i < index; i++) target = getNextElement(target);
+        for (int i = 0; i < index; i++)
+            target = getNextElement(target);
+
         return target.getItem();
     }
 
@@ -84,14 +92,15 @@ public class GBLinkedList<E> implements GBList<E> {
     public Iterator<E> iterator() {
         return new Iterator<E>() {
             int count = 0;
+
             @Override
             public boolean hasNext() {
-                return count < size ;
+                return count < size;
             }
 
             @Override
             public E next() {
-                return getNextElement();
+                return getElem(count++);
             }
         };
     }

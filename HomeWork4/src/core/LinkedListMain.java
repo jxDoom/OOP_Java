@@ -3,16 +3,19 @@ package core;
 import core.list.GBList;
 import core.list.linkedlist.impl.GBLinkedList;
 
+import java.util.Arrays;
+
 public class LinkedListMain {
     public static void main(String[] args) {
         GBList<Integer> linkedList = new GBLinkedList<>();
 
-        linkedList.add(4);
-        linkedList.add(15);
-        linkedList.add(-7);
-        linkedList.add(0);
-        linkedList.add(-244);
+        linkedList.addLast(4);
+        linkedList.addLast(15);
+        linkedList.addLast(-7);
+        linkedList.addLast(0);
+        linkedList.addLast(-244);
 
+//        System.out.println(linkedList);
         for (Integer i : linkedList) System.out.println(i);
     }
 }

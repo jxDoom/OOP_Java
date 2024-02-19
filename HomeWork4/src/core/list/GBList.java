@@ -1,8 +1,8 @@
 package core.list;
 
 public interface GBList<T> extends Iterable<T> {
-    void add(T elem);
+    void addLast(T elem);
     void remove(int index);
-    T get(int index);
+    T getElem(int index);
     int size();
 }
