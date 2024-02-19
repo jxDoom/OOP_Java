@@ -13,6 +13,7 @@ public class LinkedListMain {
         linkedList.add(0);
         linkedList.add(-244);
 
-        for (Integer i : linkedList) System.out.println(i);
+        System.out.println(linkedList);
+//        for (Integer i : linkedList) System.out.println(i);
     }
 }

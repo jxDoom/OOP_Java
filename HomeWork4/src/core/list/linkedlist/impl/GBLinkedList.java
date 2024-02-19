@@ -1,6 +1,7 @@
 package core.list.linkedlist.impl;
 
 import core.list.GBList;
+import core.list.linkedlist.util.LinkedIterator;
 
 import java.util.Iterator;
 
@@ -61,7 +62,13 @@ public class GBLinkedList<E> implements GBList<E> {
 
     @Override
     public void remove(int index) {
-
+        if (firstNode == null || index < 0 || index >= size()) {
+            System.out.println("Error: Attempting to call remove()");
+        } else {
+//            int tmp = (int) firstNode.getItem();
+//            firstNode = firstNode.getNext();
+//            tmp.
+        }
     }
 
     @Override
@@ -82,17 +89,6 @@ public class GBLinkedList<E> implements GBList<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return new Iterator<E>() {
-            int count = 0;
-            @Override
-            public boolean hasNext() {
-                return count < size ;
-            }
-
-            @Override
-            public E next() {
-                return getNextElement();
-            }
-        };
+        return new LinkedIterator<>();
     }
 }
