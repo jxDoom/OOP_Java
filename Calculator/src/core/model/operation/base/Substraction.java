@@ -1,6 +1,6 @@
-package core.util.operation.base;
+package core.model.operation.base;
 
-import core.util.Calculable;
+import core.model.operation.impl.Calculable;
 
 public class Substraction implements Calculable<Double> {
     @Override

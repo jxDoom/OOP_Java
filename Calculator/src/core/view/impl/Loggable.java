@@ -1,4 +1,4 @@
-package core.impl;
+package core.view.impl;
 
 @FunctionalInterface
 public interface Loggable {

@@ -1,4 +1,4 @@
-package core.util.operation.complex;
+package core.model.operation.complex;
 
 public class ExponentiationComplex {
 }

@@ -1,4 +1,4 @@
-package core.util;
+package core.model;
 
 public class ComplexNumber {
     private Double re;

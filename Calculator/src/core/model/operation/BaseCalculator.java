@@ -1,14 +1,17 @@
-package core.util.operation;
+package core.model.operation;
 
-import core.util.Calculable;
-import core.util.operation.base.*;
+import core.model.operation.impl.Calculable;
+import core.model.operation.base.*;
+import core.view.impl.Loggable;
 
 import java.util.HashMap;
 
 public class BaseCalculator {
     protected Double result;
+    private final Loggable logger;
 
-    public BaseCalculator() {
+    public BaseCalculator(Loggable logger) {
+        this.logger = logger;
     }
 
     public Double calculator(char operator, Double num1, Double num2) {
@@ -20,7 +23,9 @@ public class BaseCalculator {
         baseMap.put('^', new Exponentiation());
 
         result = baseMap.get(operator).calculation(num1, num2);
-        System.out.printf("%s %s %s = %s\n", num1, operator, num2, result);
+        System.out.printf("First Number: %s, Operation: '%s', Second Number: %s\n", num1, operator, num2);
+        System.out.printf("Result = %s\n\n", result);
+        logger.log(String.format("%s %s %s = %s", num1, operator, num2, result));
         return result;
     }
 }

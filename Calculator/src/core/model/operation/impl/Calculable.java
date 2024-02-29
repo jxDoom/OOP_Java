@@ -1,4 +1,4 @@
-package core.util;
+package core.model.operation.impl;
 
 @FunctionalInterface
 public interface Calculable<T> {

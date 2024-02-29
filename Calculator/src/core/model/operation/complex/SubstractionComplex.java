@@ -1,7 +1,7 @@
-package core.util.operation.complex;
+package core.model.operation.complex;
 
-import core.util.Calculable;
-import core.util.ComplexNumber;
+import core.model.operation.impl.Calculable;
+import core.model.ComplexNumber;
 
 public class SubstractionComplex implements Calculable<ComplexNumber> {
     @Override
